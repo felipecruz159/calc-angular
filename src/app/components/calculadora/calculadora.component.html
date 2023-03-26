@@ -1,0 +1,100 @@
+<link
+  href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  rel="stylesheet"
+/>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+  rel="stylesheet"
+/>
+
+<div class="calculadora">
+  <h1>Calculadora - Angular</h1>
+
+  <div id="visor">
+    <p>{{ visorOperacao }}</p>
+    <br />
+    <h1>{{ visor }}</h1>
+  </div>
+  <div class="content">
+    <div class="botoes">
+      <!-- C CE -->
+      <div class="number" id="ce" (click)="clearEntry()">
+        <h3>CE</h3>
+      </div>
+      <div class="number" id="c" (click)="clear()">
+        <h3>C</h3>
+      </div>
+      <div class="number" (click)="erase()">
+        <i class="material-icons" (click)="erase()">backspace</i>
+      </div>
+      <div class="number" id="division" (click)="divisionButton()">
+        <h3>/</h3>
+      </div>
+    </div>
+
+    <div class="botoes">
+      <!-- 789 -->
+      <div class="number" (click)="showDigit(7)">
+        <h3>7</h3>
+      </div>
+      <div class="number" (click)="showDigit(8)">
+        <h3>8</h3>
+      </div>
+      <div class="number" (click)="showDigit(9)">
+        <h3>9</h3>
+      </div>
+      <div class="number" id="multiplication" (click)="multiplicationButton()">
+        <h3>*</h3>
+      </div>
+    </div>
+
+    <div class="botoes">
+      <!-- 456 -->
+      <div class="number" (click)="showDigit(4)">
+        <h3>4</h3>
+      </div>
+      <div class="number" (click)="showDigit(5)">
+        <h3>5</h3>
+      </div>
+      <div class="number" (click)="showDigit(6)">
+        <h3>6</h3>
+      </div>
+      <div class="number" id="subtraction" (click)="subtractionButton()">
+        <h3>-</h3>
+      </div>
+    </div>
+
+    <div class="botoes">
+      <!-- 123 -->
+      <div class="number" (click)="showDigit(1)">
+        <h3>1</h3>
+      </div>
+      <div class="number" (click)="showDigit(2)">
+        <h3>2</h3>
+      </div>
+      <div class="number" (click)="showDigit(3)">
+        <h3>3</h3>
+      </div>
+      <div class="number" id="addition" (click)="additionButton()">
+        <h3>+</h3>
+      </div>
+    </div>
+
+    <div class="botoes">
+      <div class="number" (click)="invertValue()">
+        <h3>+/-</h3>
+      </div>
+      <div class="number" (click)="showDigit(0)">
+        <h3>0</h3>
+      </div>
+      <div class="number" (click)="commaFunction()">
+        <h3>,</h3>
+      </div>
+      <div class="number" id="equal" (click)="equalFunction()">
+        <h3>=</h3>
+      </div>
+    </div>
+  </div>
+</div>
