@@ -94,6 +94,7 @@ export class CalculadoraComponent {
     this.num1 = 0;
     this.num2 = 0;
     this.visor = '0';
+    this.visorOperacao = '';
     this.visorNumber = 0;
     this.operacao = '';
     this.result = 0;
